@@ -1,6 +1,6 @@
 # KakaoTalkMessageBot_Notifiactor
   
-# 메신저봇 앱에서 사용하는 파티 관리 매니저
+# 메신저봇 앱에서 사용하는 공지 기능
 # https://play.google.com/store/apps/details?id=com.xfl.kakaotalkbot&hl=ko
   
 ***
