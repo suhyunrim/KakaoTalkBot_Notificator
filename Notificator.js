@@ -8,18 +8,15 @@ var rooms = {};
 function response(roomName, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId){
     try
     {
-        if (isGroupChat && !rooms[roomName])
-            rooms[roomName] = replier;
+        if (!rooms[roomName])
+            rooms[roomName] = true;
 
-        if (isGroupChat || !msg.startsWith(Command))
+        if (!msg.startsWith(Command))
             return;
 
         const notice = msg.substring(Command.length + 1);
-        for (let key in rooms)
-        {
-            const room = rooms[key];
-            room.reply(notice);
-        }
+        for (let roomName in rooms)
+            Api.replyRoom(roomName, notice);
     }
     catch (error)
     {
